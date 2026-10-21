@@ -2,9 +2,11 @@
 
 Photoshop 套索填色插件，支持实时预览、填色、擦除、过渡和填色加描边。
 
-## 下载 1.0.0
+## 下载 1.0.1
 
-[下载安装包](https://github.com/TIMETSS/Lasso-Fill/raw/refs/heads/main/releases/1.0.0/LassoFill-Setup-1.0.0.exe) · [使用说明](releases/1.0.0/使用说明.txt) · [SHA-256 校验](releases/1.0.0/SHA256SUMS.txt)
+[正式发布页面](https://github.com/TIMETSS/Lasso-Fill/releases/tag/v1.0.1)
+
+[下载安装包](https://github.com/TIMETSS/Lasso-Fill/releases/download/v1.0.1/LassoFill-Setup-1.0.1.exe) · [使用说明](releases/1.0.1/使用说明.txt) · [SHA-256 校验](releases/1.0.1/SHA256SUMS.txt)
 
 目标环境：Windows x64、Photoshop 2025。面板依赖 Microsoft Edge WebView2 Runtime。
 
@@ -19,7 +21,7 @@ Photoshop 套索填色插件，支持实时预览、填色、擦除、过渡和�
 ## 功能
 
 - **填色**：用前景色填充当前图层的圈画区域。
-- **擦除**：清除当前像素图层的圈画区域，使其透明。
+- **擦除**：像素图层上清为透明；图层蒙版上使用背景灰度色。
 - **过渡**：对当前图层的圈画区域执行平均，得到均匀的平均色。
 - **描边**：填充圈画区域，并沿选区边缘描边。
 
@@ -31,7 +33,16 @@ Photoshop 套索填色插件，支持实时预览、填色、擦除、过渡和�
 
 此安装包默认关闭 Debug 运行日志和逐笔性能计时。
 
-## 最近更新（2026-10-19）
+选中图层蒙版缩略图时，填色、擦除、过渡和描边作用于该蒙版，支持普通图层和组等图层的像素蒙版。
+
+## 1.0.1 更新（2026-10-21）
+
+- 修复蒙版灰度颜色读取，增加图层蒙版操作支持。
+- 蒙版擦除使用背景灰度色，普通像素图层仍清为透明。
+- 移除额外的落笔／提交前通道复查，保留原有采样和提交等待逻辑。
+- [旧版 1.0.0](releases/1.0.0/LassoFill-Setup-1.0.0.exe) 保留下载。
+
+## 1.0.0 更新（2026-10-19）
 
 - 修复 Alt 临时取色与 Alt＋滚轮缩放的兼容问题。
 - 增加首次打开或新建文档后自启动，支持在设置中关闭。
